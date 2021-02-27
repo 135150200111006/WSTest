@@ -1,0 +1,7 @@
+var jsonObject = xml2Json(responseBody);
+
+
+
+tests["Jumlah Artikel 10"] = pm.expect(jsonObject.rss.channel.item.length).to.equal(10)
+
+tests["Status 200"] = pm.response.to.have.status(200)
